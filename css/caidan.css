@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2d2013;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.random-btn {
+    background-color: #efefef;
+    cursor: pointer;
+    margin-left: 10px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+input[type='text'] {
+    width: 300px;
+}
+
+input,
+button {
+    border: 1px solid #dedede;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    /* font-size: 14px; */
+    padding: 8px 10px;
+    margin: 0;
+}
+
+.meal img {
+    width: 100%;
+    height: 100%;
+    border: 4px #fff solid;
+    border-radius: 2px;
+}
+
+.search-btn {
+    background-color: #efefef;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    border-left: 0;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-image: url("..//img/sousuo.png");
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.meal-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in;
+    opacity: 0;
+}
+
+.single-meal {
+    margin: 30px auto;
+    width: 70%;
+}
+
+.single-meal img {
+    width: 300px;
+    margin: 15px;
+    border: 4px #fff solid;
+    border-radius: 2px;
+}
+
+.single-meal p {
+    margin: o;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.single-meal ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+li {
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    background-color: #fff;
+    display: inline-block;
+    color: #2d2013;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
+
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1597663669698');
+    /* IE9 */
+    src: url('iconfont.eot?t=1597663669698#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAARQAAsAAAAACKgAAAQEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqEaIQwATYCJAMQCwoABCAFhG0HQhucBxHVm5XJfh7GjolOOwtnSvgmiuqikr4k9nMQ0Ht+s8lWaR6Ig10cKBRn/8Hdb84foZ2OnCrJqQ8ogVUpR4X05dIPwnEA5L8n4B/HfF1S4zCfzeaSEVo4wPHOdwOKyJ8lVoD4h7GLyzgMAWjEk4uofFHbxgKJNkoAorvt1IZFTI8sKRWYERhzFkrEbAyYlSnKdWCW+/fiEwWFGRQMKtrE+h2rtOfobea7yepoXzS3EQj6swLMMlCBXECC6Jxrb8vYj+eioknZE4oCZv0nCrzdv23wbrIPEq5FbkZy2v7jKSCMaHIdYgtrVXZMYPJDxQ1kQcC7Lz0KRsvhZkADbg8Q/gAb+ygKKoYAvURISrQeLixBDu9Dh2e6zTXW7n7htPf1jHN6ZwTXHGtzTR82OtQ2f+pCIbSp+zdvjlycm3/x7u3HD5/XtIytxiyyWqcd2rYtZlmhQsv27Tp17JLVCr49Lcy+oPV229KlW7cerKTq04/H9nNwoy7ZWFIWvcu5ZMmWLQdaPP0wxzavGOO565nquu0a7b7jLjLNm2NfMG3bmL5er9PttrtcNo+n3dT5LL899W78mIV+xhp3lUveFJrj0EYvmLYo2fHf9t22KfEl+g+ePqG3QZ44o9dXDh9UMWpqi607V5Zs01Fvozu10TtmbTvpbVXHtjollOqzQjNnFtIHzRw+LM+WnPmP6jUY517bcUHdhPZGmWt+SPtd7tKc9Q/L1x/vWtdhYsv4fnbToLXtf0ah7/kXJ9efd7lXg9jQeu6uzOXOpl6z7Z2Hd7nZfunuJUn15t1XtCH9OH7DyRSov+DSpeYRldPyJNX/Wi+xqUH5n1i/ieS/t9nptErhFy5dmhwZFJnsFJVfm1XmDNsrKg8rqVyHAzvojZfHLDKwZqB0JcF+JLx69datTUm4mnc9J1J7Eqpn0JsBPu240ep/dcBgAOoc5Q2AmqCc+zcGEfzr5a0CSn8zWy9O6FE69YDLa4eT8F+woLbgT2gl8UGyIk0vpWjwcQX1i5D0Ynr7rKDpbvAhdzBP+1CGScUgMBMWgoKJOFAxk4qU2FwwYKUwGDFTDjRyqLbcSgh9GSOkBchmAgBBILtAwZ9ToBLIDaTEPgED4XwBI4FCBQ2HCNnQSrpg7eqUMRMsIf8EW1CrDJOsvNJb1H2dcVTkUh+RvQ1BHETJ1CW2yH1M8W86EVGgmBq4AMdhXRN0TA4LCYxIdwhDlfdCQUHNYMUpYyZYQv4JtqBW2Y1llfr9W9R9nXFJTYn9Ednb9iEOohrIS3lbq+Zc7uLfdCKiQDE1cAGsWOtxgi6/n8NCAtMi2h1CVE/VlQfjK5sr3ARoaBtIoQhVSGFg1o9639PUDFhn5xFbPBgA') format('woff2'), url('iconfont.woff?t=1597663669698') format('woff'), url('iconfont.ttf?t=1597663669698') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('iconfont.svg?t=1597663669698#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
